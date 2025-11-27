@@ -3,22 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <title>Monarq | Frontier AI for Emerging Markets</title>
+    <title>Madar | Unified Logistics Platform</title>
     
-    <!-- FONTS (Checked against upload: SuisseIntl-Regular.woff2 & Light.woff2 exist) -->
+    <!-- FONTS -->
     <link rel="preload" href="assets/fonts/SuisseIntl-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/SuisseIntl-Light.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- STYLES (Renamed locally to remove ?bqyar) -->
+    <!-- STYLES -->
     <style>
+        /* Original Base Styles */
         body { background: #172E64; color: #172E64; }
         a { color: #172E64; }
-        /* Override Madar Blue with Monarq Dark Theme */
-        .ui-dark { --t-background: #101010; --t-background-alt: #1a1a1a; }
-        
-        /* CRITICAL: Force hide transitions on load */
         .js.not-ready, .js.not-ready * { transition: none !important; }
-        /* CRITICAL: Hide preloader manually since we removed the JS for it */
+        
+        /* Safety override to ensure site loads even if JS hangs */
         .preloader { display: none !important; }
     </style>
     <link rel="stylesheet" href="assets/css/global.css">
@@ -39,7 +37,7 @@
 <body data-barba="wrapper">
     <a href="#top" class="sr-only sr-only--focusable">Skip to main content</a>
 
-    <!-- PAGE CONTENT WRAPPER -->
+    <!-- PAGE WRAPPER -->
     <div class="page-content-wrapper js-page-content-wrapper ui-light-background" data-barba="container" data-barba-namespace="page">
         
         <!-- HEADER -->
@@ -47,11 +45,9 @@
             <div class="header__background"></div>
             <div class="header__content container-h-vars">
                 <div class="header__content__inner">
-                    <!-- LOGO (Restored SVG Sprite usage from original) -->
                     <a class="btn btn--link header__content__logo" href="#top" aria-label="Scroll to top of the page">
                         <span class="btn__content">
                             <span class="btn__icon">
-                                <!-- Ensure assets/images/icons.svg exists -->
                                 <svg class="icon icon-logo" width="152" height="30" aria-hidden="true" viewBox="0 0 152 30" style="--icon-width: 152; --icon-height: 30;">
                                     <use href="assets/images/icons.svg#logo" xlink:href="assets/images/icons.svg#logo"></use>
                                 </svg> 
@@ -63,12 +59,10 @@
                     </a>
                     <span class="header__progress" data-plugin="pageProgress"></span>
                 </div>
-                
-                <!-- Header Button -->
                 <div class="header__started" data-plugin="startedButtons">
                     <button class="btn header__started-button js-toggle btn--primary btn--text-arrow btn--full btn--full-width">
                         <span class="btn__content">
-                            <span class="btn__text">Get the Brief</span>
+                            <span class="btn__text">Get Started</span>
                             <span class="btn__icon">
                                 <svg class="icon icon-arrow-down" width="14" height="7" aria-hidden="true" viewBox="0 0 14 7" style="--icon-width: 14; --icon-height: 7;">
                                     <use href="assets/images/icons.svg#arrow-down" xlink:href="assets/images/icons.svg#arrow-down"></use>
@@ -80,54 +74,41 @@
             </div>
         </header>
 
-        <!-- PAGE CONTENT -->
+        <!-- MAIN CONTENT -->
         <div class="page-content js-page-content">
             <main id="top">
                 
-                <!-- SECTION: HERO -->
+                <!-- SECTION 1: HERO -->
                 <section class="section section--no-overflow ui-background ui-dark" data-scroll-section data-themed-class="ui-dark">
-                    
                     <div class="sticky sticky--full-height sticky--under-next">
                         
-                        <!-- BACKGROUND LAYER (Parallax & Pins) -->
-                        <!-- Removed data-plugin="webglLines" here to fix loading freeze -->
+                        <!-- BACKGROUND LAYER -->
+                        <!-- Removed data-plugin="webglLines" to prevent freeze -->
                         <div class="sticky__layer sticky__layer--sticky sticky__layer--no-overflow" data-scroll data-scroll-sticky>
                             
-                            <!-- Pin 1: Geospatial -->
+                            <!-- PINS (Original Data) -->
                             <div class="pin js-truck-hover-pin-boxes pin--left pin--hoverable pin--visible">
-                                <p class="pin__label leading-trim">Geospatial<br>Analysis</p>
+                                <p class="pin__label leading-trim">Shipment<br>Efficiency</p>
                                 <div class="pin__info">
-                                    <dl><dt class="leading-trim">Accuracy</dt><dd class="leading-trim">99.8%</dd></dl>
-                                    <dl><dt class="leading-trim">Coverage</dt><dd class="leading-trim">Global</dd></dl>
+                                    <dl><dt class="leading-trim">Load Optimization</dt><dd class="leading-trim">100%</dd></dl>
+                                    <dl><dt class="leading-trim">Shipment Fulfillment</dt><dd class="leading-trim">On time</dd></dl>
                                     <a class="btn btn--secondary btn--square btn--sm2 is-hidden--hover pin__button js-pin-close" aria-label="Close" role="button" tabindex="0">
                                         <span class="btn__content">
-                                            <span class="btn__icon">
-                                                <svg class="icon icon-info-close" width="10" height="10" aria-hidden="true" viewBox="0 0 10 10" style="--icon-width: 10; --icon-height: 10;">
-                                                    <use href="assets/images/icons.svg#info-close" xlink:href="assets/images/icons.svg#info-close"></use>
-                                                </svg>
-                                            </span>
+                                            <span class="btn__icon"><svg class="icon icon-info-close" width="10" height="10"><use href="assets/images/icons.svg#info-close" xlink:href="assets/images/icons.svg#info-close"></use></svg></span>
                                         </span>
                                     </a>
                                 </div>
-                                <svg class="pin__info-line" width="72" height="46" viewBox="0 0 72 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path vector-effect="non-scaling-stroke" d="M71 45L1 1" stroke="white" stroke-opacity="0.2"/></svg> 
-                                <svg class="pin__border" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path vector-effect="non-scaling-stroke" d="M25.0467 38.8356C28.3531 37.9497 31.3679 36.2091 33.7883 33.7887C36.2087 31.3683 37.9494 28.3534 38.8353 25.0471" stroke="white"/><path vector-effect="non-scaling-stroke" d="M14.9528 1.16454C11.6465 2.05047 8.63157 3.79111 6.21117 6.21151C3.79077 8.63191 2.05013 11.6468 1.1642 14.9531" stroke="white"/></svg>
-                                <div class="pin__background"></div>
-                                <div class="pin__dot"></div>
+                                <div class="pin__background"></div><div class="pin__dot"></div>
                             </div>
 
-                            <!-- MAIN BACKGROUND IMAGE -->
-                            <!-- Note: Original Madar CSS expects .parallax-image-move to handle the zoom. -->
-                            <!-- Ensure assets/images/media/landing/1.hero/background-xs.webp exists -->
+                            <!-- BACKGROUND IMAGE -->
+                            <!-- Using your uploaded XS file as the base. Replace with higher res versions later -->
                             <div class="parallax-image-move background--cover" style="width: 100%; height: 120%;">
-                                <picture>
-                                    <!-- If you have larger versions, uncomment and add them here -->
-                                    <!-- <source srcset="assets/images/media/landing/1.hero/background@xxxl.webp" media="(min-width: 1920px)"> -->
-                                    <img src="assets/images/media/landing/1.hero/background-xs.webp" alt="Background" style="width: 100%; height: 100%; object-fit: cover;">
-                                </picture>
+                                <img src="assets/images/media/landing/1.hero/background-xs.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="">
                             </div>
                         </div>
 
-                        <!-- SCROLLING CONTENT LAYERS -->
+                        <!-- SCROLLING TEXT LAYERS -->
                         <div class="sticky__layer hero-container">
                             <div id="next" class="hero-anchor"></div>
 
@@ -136,16 +117,16 @@
                                 <div class="hero-sticky__layer">
                                     <div class="hero-sticky__layer-sticky hero-sticky__layer-between" data-scroll data-scroll-sticky>
                                         <div class="row px-small pt-7 pt-4:md pt-small:lg pb-small">
-                                            <div class="col offset--md-5 col--md-7 col--lg-5 offset--lg-7 text-right">
+                                            <div class="col offset--md-5 col--md-7 col--lg-4 offset--lg-8 text-right">
                                                 <h1 class="hero-sticky__title h1 leading-trim is-invisible js-hero-title" 
                                                     data-plugin="parallax" 
                                                     data-parallax-0svh-0='{"progress": 0}' 
                                                     data-parallax--10svh-0='{"progress": 1}' 
                                                     data-parallax-enter="if (this.initialCalled) { this.$container.transition('title'); } this.$container.data('hidden-with-parallax', false); this.initialCalled = true;" 
                                                     data-parallax-leave="this.$container.data('hidden-with-parallax', true);this.$container.transition('title-out', 'hideInvisible')">
-                                                    <span class="text-color-primary">Frontier AI</span><br>
-                                                    <span>For The Next</span><br>
-                                                    <span>Billion</span>
+                                                    <span class="text-color-primary">Unified</span><br>
+                                                    <span>Logistics</span><br>
+                                                    <span>Platform</span>
                                                 </h1>
                                             </div>
                                         </div>
@@ -154,13 +135,11 @@
                                                 <div class="hero-box hero-box--intro is-invisible js-hero-box" data-plugin="parallax" data-parallax-clamp="true" data-parallax-0svh-0='{"progress": 0}' data-parallax--10svh-0='{"progress": 1}' data-parallax-enter="if (this.initialCalled) { this.$container.transition('flicker-in'); } this.$container.data('hidden-with-parallax', false); this.initialCalled = true;" data-parallax-leave="this.$container.data('hidden-with-parallax', true); this.$container.transition('flicker-out', 'hideInvisible')">
                                                     <div class="hero-box__main px-small:md py-small:md">
                                                         <p class="text-lead leading-trim pb-1:md pb-5:lg pr-1 pr-0:md">
-                                                            By 2030, emerging markets will represent 65% of global GDP growth, yet they operate with less than 8% of AI infrastructure.
+                                                            Unlock unequalled business performance with real-time insights, automation, an expanding marketplace, and digital payments. Join the logistics revolution in the making.
                                                         </p>
                                                         <a class="btn btn btn--ternary btn--square btn--corner btn--md btn--glitch ml-auto mr-0" href="#next">
                                                             <span class="btn__content">
-                                                                <span class="btn__icon">
-                                                                    <svg class="icon icon-arrow-down" width="14" height="7"><use href="assets/images/icons.svg#arrow-down" xlink:href="assets/images/icons.svg#arrow-down"></use></svg>
-                                                                </span>
+                                                                <span class="btn__icon"><svg class="icon icon-arrow-down" width="14" height="7"><use href="assets/images/icons.svg#arrow-down" xlink:href="assets/images/icons.svg#arrow-down"></use></svg></span>
                                                             </span>
                                                         </a>
                                                     </div>
@@ -171,7 +150,7 @@
                                 </div>
                             </div>
 
-                            <!-- SLIDE 2: QC-VISION -->
+                            <!-- SLIDE 2: LIVE SHIPMENT TRACKING -->
                             <div class="hero-sticky is-hidden--md-down" style="--hero-height: 725svh; margin-top: -195svh;">
                                 <div class="hero-sticky__layer">
                                     <div class="hero-sticky__layer-sticky hero-sticky__layer-bottom:xs" data-scroll data-scroll-sticky>
@@ -180,27 +159,15 @@
                                                 <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--100svh-0='{"progress": 0}' data-parallax--175svh-0='{"progress": 1}' data-parallax-enter="this.$container.animation(direction === 1 ? 'cardIn' : 'cardInReverse');" data-parallax-leave="this.$container.animation(direction === 1 ? 'cardOut' : 'cardOutReverse');">
                                                     <div class="hero-box__main pt-small pb-small">
                                                         <div class="mb-2 px-small">
-                                                            <h3 class="h3 leading-trim hero-box__title">QC-Vision</h3>
+                                                            <h3 class="h3 leading-trim hero-box__title">Live Shipment Tracking and Monitoring</h3>
                                                         </div>
                                                         <div class="text-center px-small">
-                                                            <!-- Use uploaded file name: cards-4-1@xs.webp -->
-                                                            <picture>
-                                                                <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-1@xs.webp" alt="QC Vision" draggable="false">
-                                                            </picture>
+                                                            <!-- Image 4-1 -->
+                                                            <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-1@xs.webp" alt="" draggable="false">
                                                         </div>
                                                         <div class="mt-3 px-small hero-box__text">
                                                             <div class="border-deco"></div>
-                                                            <p class="text-t1 leading-trim pt-small">
-                                                                Automated defect detection for garment manufacturing. Detects oil stains, stitching errors, and color variance in 45 milliseconds.
-                                                            </p>
-                                                        </div>
-                                                        <div class="text-right mt-3 px-small">
-                                                            <a class="btn btn--white btn--text-arrow btn--glitch" href="#">
-                                                                <span class="btn__content">
-                                                                    <span class="btn__text">Read More</span>
-                                                                    <span class="btn__icon"><svg class="icon icon-arrow-right" width="7" height="14"><use href="assets/images/icons.svg#arrow-right" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></span>
-                                                                </span>
-                                                            </a>
+                                                            <p class="text-t1 leading-trim pt-small">Get a glimpse into every second of your freight's journey with 360-degree observation powered by smart AVL/IoT telemetry.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -210,28 +177,24 @@
                                 </div>
                             </div>
 
-                            <!-- SLIDE 3: FailPredict -->
+                            <!-- SLIDE 3: DRIVER BEHAVIOR -->
                             <div class="hero-sticky is-hidden--md-down" style="--hero-height: 325svh; margin-top: 180svh;">
                                 <div class="hero-sticky__layer">
                                     <div class="hero-sticky__layer-sticky hero-sticky__layer-bottom:xs" data-scroll data-scroll-sticky>
                                         <div class="row px-small py-small">
                                             <div class="col col--md-5 offset--md-7">
-                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--175svh-0='{"progress": 0}' data-parallax--250svh-0='{"progress": 1}'>
+                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--175svh-0='{"progress": 0}' data-parallax--250svh-0='{"progress": 1}' data-parallax-enter="this.$container.animation(direction === 1 ? 'cardIn' : 'cardInReverse');" data-parallax-leave="this.$container.animation(direction === 1 ? 'cardOut' : 'cardOutReverse');">
                                                     <div class="hero-box__main pt-small pb-small">
                                                         <div class="mb-2 px-small">
-                                                            <h3 class="h3 leading-trim hero-box__title">FailPredict</h3>
+                                                            <h3 class="h3 leading-trim hero-box__title">Driver Behavior Analysis</h3>
                                                         </div>
                                                         <div class="text-center px-small">
-                                                            <!-- Use uploaded file name: cards-4-2@xs.webp -->
-                                                            <picture>
-                                                                <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-2@xs.webp" alt="FailPredict" draggable="false">
-                                                            </picture>
+                                                            <!-- Image 4-2 -->
+                                                            <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-2@xs.webp" alt="" draggable="false">
                                                         </div>
                                                         <div class="mt-3 px-small hero-box__text">
                                                             <div class="border-deco"></div>
-                                                            <p class="text-t1 leading-trim pt-small">
-                                                                Predictive maintenance sensors. Detects vibration anomalies in sewing machines days before failure occurs.
-                                                            </p>
+                                                            <p class="text-t1 leading-trim pt-small">Receive a broad “road” portrait of the driver made in great detail. How is he handling the route: are there sharp turns, excessive idle time, or hard braking?</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -241,28 +204,24 @@
                                 </div>
                             </div>
 
-                             <!-- SLIDE 4: PowerGuard -->
-                            <div class="hero-sticky is-hidden--md-down" style="--hero-height: 325svh; margin-top: 180svh;">
+                            <!-- SLIDE 4: eGOVERNMENT -->
+                             <div class="hero-sticky is-hidden--md-down" style="--hero-height: 325svh; margin-top: 180svh;">
                                 <div class="hero-sticky__layer">
                                     <div class="hero-sticky__layer-sticky hero-sticky__layer-bottom:xs" data-scroll data-scroll-sticky>
                                         <div class="row px-small py-small">
                                             <div class="col col--md-5 offset--md-7">
-                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--250svh-0='{"progress": 0}' data-parallax--325svh-0='{"progress": 1}'>
+                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--250svh-0='{"progress": 0}' data-parallax--325svh-0='{"progress": 1}' data-parallax-enter="this.$container.animation(direction === 1 ? 'cardIn' : 'cardInReverse');" data-parallax-leave="this.$container.animation(direction === 1 ? 'cardOut' : 'cardOutReverse');">
                                                     <div class="hero-box__main pt-small pb-3 pb-9:lg">
                                                         <div class="mb-2 px-small">
-                                                            <h3 class="h3 leading-trim hero-box__title">PowerGuard</h3>
+                                                            <h3 class="h3 leading-trim hero-box__title">eGovernment Services Integration</h3>
                                                         </div>
                                                         <div class="text-center px-small">
-                                                             <!-- Use uploaded file name: cards-4-3@xs.webp -->
-                                                            <picture>
-                                                                <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-3@xs.webp" alt="PowerGuard" draggable="false">
-                                                            </picture>
+                                                            <!-- Image 4-3 -->
+                                                            <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-3@xs.webp" alt="" draggable="false">
                                                         </div>
                                                         <div class="mt-3 px-small hero-box__text">
                                                             <div class="border-deco"></div>
-                                                            <p class="text-t1 leading-trim pt-small">
-                                                                Intelligent energy management for a power-constrained grid. Monitors consumption and optimizes load to avoid peak tariffs.
-                                                            </p>
+                                                            <p class="text-t1 leading-trim pt-small">Turn compliance documentation from a burden into a powerful business asset. Madar does all mandatory compliance checks automatically.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -272,28 +231,24 @@
                                 </div>
                             </div>
 
-                             <!-- SLIDE 5: FloodSight -->
+                            <!-- SLIDE 5: ROUTE PLANNING -->
                             <div class="hero-sticky is-hidden--md-down" style="--hero-height: 325svh; margin-top: 180svh;">
                                 <div class="hero-sticky__layer">
                                     <div class="hero-sticky__layer-sticky hero-sticky__layer-bottom:xs" data-scroll data-scroll-sticky>
                                         <div class="row px-small py-small">
                                             <div class="col col--md-5 offset--md-7">
-                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--325svh-0='{"progress": 0}' data-parallax--400svh-0='{"progress": 1}'>
+                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--325svh-0='{"progress": 0}' data-parallax--400svh-0='{"progress": 1}' data-parallax-enter="this.$container.animation(direction === 1 ? 'cardIn' : 'cardInReverse');" data-parallax-leave="this.$container.animation(direction === 1 ? 'cardOut' : 'cardOutReverse');">
                                                     <div class="hero-box__main pt-small pb-small">
                                                         <div class="mb-2 px-small">
-                                                            <h3 class="h3 leading-trim hero-box__title">FloodSight</h3>
+                                                            <h3 class="h3 leading-trim hero-box__title">Automated Route Planning and Optimization</h3>
                                                         </div>
                                                         <div class="text-center px-small">
-                                                            <!-- Use uploaded file name: cards-4-4@xs.webp -->
-                                                            <picture>
-                                                                <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-4@xs.webp" alt="FloodSight" draggable="false">
-                                                            </picture>
+                                                            <!-- Image 4-4 -->
+                                                            <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-4@xs.webp" alt="" draggable="false">
                                                         </div>
                                                         <div class="mt-3 px-small hero-box__text">
                                                             <div class="border-deco"></div>
-                                                            <p class="text-t1 leading-trim pt-small">
-                                                                Satellite-powered climate intelligence. Monitoring flood extent and river erosion with 10-meter resolution using ESA Sentinel data.
-                                                            </p>
+                                                            <p class="text-t1 leading-trim pt-small">With Madar, the optimal delivery route is built into every shipment. Madar continuously monitors live traffic data, adjusting routes in real time.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -302,29 +257,25 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                             <!-- SLIDE 6: AquaGuard -->
+
+                            <!-- SLIDE 6: KPIs -->
                             <div class="hero-sticky is-hidden--md-down" style="--hero-height: 325svh; margin-top: 180svh;">
                                 <div class="hero-sticky__layer">
                                     <div class="hero-sticky__layer-sticky hero-sticky__layer-bottom:xs" data-scroll data-scroll-sticky>
                                         <div class="row px-small py-small">
                                             <div class="col col--md-5 offset--md-7">
-                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--400svh-0='{"progress": 0}' data-parallax--475svh-0='{"progress": 1}'>
+                                                <div class="hero-box hero-box--multiple is-invisible" data-plugin="parallax" data-parallax-enable-mq="lg-up" data-parallax-measure-selector=".hero-sticky" data-parallax-clamp="true" data-parallax--400svh-0='{"progress": 0}' data-parallax--475svh-0='{"progress": 1}' data-parallax-enter="this.$container.animation(direction === 1 ? 'cardIn' : 'cardInReverse');" data-parallax-leave="this.$container.animation(direction === 1 ? 'cardOut' : 'cardOutReverse');">
                                                     <div class="hero-box__main pt-small pb-small">
                                                         <div class="mb-2 px-small">
-                                                            <h3 class="h3 leading-trim hero-box__title">AquaGuard-AI</h3>
+                                                            <h3 class="h3 leading-trim hero-box__title">Complete Range of KPIs</h3>
                                                         </div>
                                                         <div class="text-center px-small">
-                                                            <!-- Use uploaded file name: cards-4-5@xs.webp -->
-                                                            <picture>
-                                                                <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-5@xs.webp" alt="AquaGuard" draggable="false">
-                                                            </picture>
+                                                            <!-- Image 4-5 -->
+                                                            <img class="hero-box__image img-full" src="assets/images/media/landing/1.hero/cards-4-5@xs.webp" alt="" draggable="false">
                                                         </div>
                                                         <div class="mt-3 px-small hero-box__text">
                                                             <div class="border-deco"></div>
-                                                            <p class="text-t1 leading-trim pt-small">
-                                                                Protecting a $600M industry. Detects invisible disease signatures in shrimp ponds 72 hours before mass mortality.
-                                                            </p>
+                                                            <p class="text-t1 leading-trim pt-small">Imagine a panoramic view of your business unfolding before your eyes. Shipment numbers and statuses, fulfillment rates, financial flows, driver performance, everything is at your fingertips.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -344,21 +295,21 @@
                         <div class="container-h">
                             <div class="row row--pad">
                                 <div class="col col--xs-4 col--lg-6 offset--lg-6">
-                                    <h2 class="h2 leading-trim" data-reveal="title">Ready to<br>Democratize AI?</h2>
-                                    <p>Join us in bringing the AI revolution to the 85% of the world left behind.</p>
+                                    <h2 class="h2 leading-trim" data-reveal="title">Driving Leaders<br>Forward</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
             </main>
 
             <!-- FOOTER -->
             <footer class="section section--no-overflow ui-dark ui-background footer" data-scroll-section>
                 <div class="container-h">
                     <div class="row row--pad mt-8">
-                        <p class="leading-trim text-color-small">2025 &copy; Monarq AI.</p>
+                         <div class="col col--xs-auto">
+                            <p class="leading-trim text-color-small">2025 &copy; Madar International</p>
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -372,18 +323,15 @@
                      <nav class="col col--xs-4 col--md-6 col--lg-4 menu__layout">
                         <ol class="menu__list">
                             <li class="menu__item"><a href="#" class="h2">Home</a></li>
-                            <li class="menu__item"><a href="#" class="h2">Platform</a></li>
-                            <li class="menu__item"><a href="#" class="h2">Contact</a></li>
                         </ol>
-                    </nav>
-                    <a class="btn btn--link col js-modal-close" aria-label="Close" role="button">Close</a>
+                     </nav>
+                     <a class="btn btn--link col js-modal-close" aria-label="Close" role="button">Close</a>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <!-- MOBILE ORIENTATION WARNING -->
+    
+    <!-- MOBILE ORIENTATION WARNING (Restored from original) -->
     <div class="turn-message text-center ui-dark ui-background is-hidden--xs is-hidden--lg-up" data-nosnippet>
         <div class="header">
             <div class="header__content">
@@ -400,24 +348,20 @@
                 </div>
             </div>
         </div>
-        <!-- Updated Path for turn message image -->
         <picture class="is-invisible--js is-hidden--no-js svg-fix" data-plugin="appear" draggable="false">
+            <!-- Updated path to match your uploads -->
             <img src="assets/images/turn-message-sm.svg" alt="" width="161" height="161" draggable="false">
         </picture>
-        <noscript>
-            <picture class="svg-fix" draggable="false">
-                <img src="assets/images/turn-message-sm.svg" alt="" width="161" height="161" draggable="false">
-            </picture>
-        </noscript>
         <p class="text-t1 leading-trim mt-3 is-hidden--md-up">Please rotate your device<br>to vertical position</p>
         <p class="text-t1 leading-trim mt-2 pb-2 is-hidden--sm-down">Please rotate your device<br>to vertical position</p>
     </div>
 
     <!-- SCRIPTS -->
+    <!-- Restored browser-message.js which was in original -->
     <script fetchpriority="low" async src="assets/js/browser-message.js"></script>
     <script fetchpriority="low" src="assets/js/shared.js"></script>
     <script>
-        // Patch to prevent JS crashing due to missing locales
+        // PATCH: Prevents JS crash due to missing form validation locales
         var LOCALES = {
             'errors': {
                 'email': 'Please enter a valid email address',
